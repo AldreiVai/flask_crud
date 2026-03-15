@@ -2,7 +2,7 @@
 
 ## Libraries Used
 
-### FlaskÍ
+### Flask
 ### Jinja
 ### Flask-SQLAlchemy
 ### Flask-Migrate
@@ -10,6 +10,7 @@
 ### python-dotenv
 
 ## Installation
+```
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
