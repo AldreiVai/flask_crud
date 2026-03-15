@@ -2,10 +2,14 @@ from flask import Flask
 from .extensions import db, migrate
 from .models.notes_model import Notes
 from .routes.notes_routes import notes_bp
+import os
+from dotenv import load_dotenv
 
 def create_app():
     app = Flask(__name__)
-    app.config["SQLALCHEMY_DATABASE_URI"] = app.config["SQLALCHEMY_DATABASE_URI"] = f"postgresql://postgres:password@localhost:5432/flask_crud"
+
+    load_dotenv()
+    app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
 
     db.init_app(app)
     migrate.init_app(app, db)

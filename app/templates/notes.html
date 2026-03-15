@@ -9,13 +9,19 @@
     <div class="container p-4">
         <h1 class="fw-bold">All Notes</h1>
         <form class="mb-3" action="{{ url_for('notes.add_note') }}" method="POST">
-            <div class="d-flex justify-content-between">
-                <input class="form-control" type="text" name="notes" required placeholder="Enter new note">
-                <button class="btn btn-primary" type="submit">Add Note</button>
+            <div class="row">
+                <div class="col-12 col-md-8">
+                    <input class="form-control" type="text" name="notes" required placeholder="Enter new note">
+                </div>
+                <div class="col-12 col-md-4 mt-2 mt-md-0">
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-primary" type="submit">Add Note</button>
+                    </div>
+                </div>
             </div>
         </form>
 
-        <ul>
+        <ul style="padding: 0">
            {% for note in notes %}
 <li class="mb-3">
     <div class="container-fluid border rounded p-3">
