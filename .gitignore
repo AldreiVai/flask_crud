@@ -1,0 +1,58 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Flask instance folder
+instance/
+.webassets-cache
+
+# Environment variables
+.env
+.env.*     # for different environments like .env.dev
+
+# SQLite database (if any)
+*.db
+*.sqlite3
+
+# Migrations (optional: you may want to keep migrations tracked)
+migrations/__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# macOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Docker
+*.dockerfile.*
+docker-compose.override.yml
+docker-compose.override.yml.local
+*.pid
+*.pid.lock
+
+# Pytest cache
+.pytest_cache/
+.cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+coverage.xml

@@ -11,7 +11,8 @@ def home():
         data = NotesService.get_all_notes()
         return render_template("notes.html", notes=data)
     except Exception as ex:
-        return jsonify({"message":ex})
+        print(ex) 
+        return "Cannot establish database connection", 500
     
 @notes_bp.route("/notes/<int:id>/edit")
 def edit_note(id):

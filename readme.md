@@ -14,6 +14,22 @@
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-Add a .env and add DATABASE_URL=postgresql://postgres:password@localhost:5432/db_name
+```
+
+## .env
+```
+DATABASE_URL=postgresql://postgres:password@localhost:5432/flask_crud
+DOCKER_DB_CONNECTION=postgresql://postgres:password@db:5432/flask_crud
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=your_password
+POSTGRES_DB=flask_crud
+
+```
+## Then run:
+```
 flask db upgrade
 flask run
+```
+
+For running in Docker:
+docker compose up --build
