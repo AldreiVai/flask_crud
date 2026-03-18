@@ -19,7 +19,7 @@ class NotesService:
     def get_notes_by_id(id:int):
         try:
             data : Notes = Notes.query.get_or_404(id)
-            return jsonify(data)
+            return data
         except Exception as e:
             print(e)
 
